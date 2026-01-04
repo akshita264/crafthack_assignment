@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+# Order Tracking App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A professional cross-platform mobile application built with **React Native** and **Expo SDK**. This project features a modular architecture focusing on reusable UI components and robust state management.
 
-## Get started
+---
 
-1. Install dependencies
+## Getting Started
 
-   ```bash
-   npm install
-   ```
+### Prerequisites
+Before you begin, ensure you have the following installed:
+* **Node.js** (LTS version)
+* **npm** or **yarn**
+* **Android Studio** (for Android Emulator) or **Xcode** (for iOS Simulator)
+* **Expo Go** app on your physical device (optional)
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### Installation
+1. **Clone the repository:**
 ```bash
-npm run reset-project
+   git clone [https://github.com/akshita264/crafthack_assignment.git](https://github.com/akshita264/crafthack_assignment.git)
+   cd crafthack_assignment
 ```
+2. **Install Dependencies:**
+```bash
+   npm install 
+```
+3. **Set up Environment Variables:** Set up Environment Variables: Ensure your Android SDK path is correctly configured in your system environment variables (especially if using a non-standard drive like F:).
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Development
+- To start the development server (Metro Bundler):
+``` bash
+   npx expo start
+```
+- Mobile Execution
+* Android: Press a in the terminal to open the project in the Android Emulator.
+* iOS: Press i to open in the iOS Simulator.
+* Web: Press w to open in your browser.
 
-## Learn more
+- Note: If you encounter connection issues with the emulator (Error 10061), ensure your ADB server is running and use: adb reverse tcp:8081 tcp:8081
 
-To learn more about developing your project with Expo, look at the following resources:
+### Project Structure
+- The project follows a modern Expo Router convention:
+- /app: Contains the main application routes and navigation tabs.
+- /components/ui: Atomic UI components like OrderCard and StatusBadge.
+- /constants: Global theme colors and configuration files.
+- /hooks: Custom React hooks (e.g., useColorScheme).
+- /src/context: Context API providers for global state management (e.g., OrderContext).
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Technical Stack
+- Framework: Expo
+- Language: TypeScript
+- Navigation: Expo Router (File-based routing)
+- Styling: React Native StyleSheet / Lucide Icons
